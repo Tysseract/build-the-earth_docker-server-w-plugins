@@ -17,10 +17,12 @@
 
 #wget https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar -O installer.jar
 java -jar installer.jar --installServer
+echo "Install Complete, removing installer..."
 rm installer.jar
-echo Renaming forge to forge.jar...
-rm forge.jar || true
-mv forge-1.12.2-14.23.5.2847-universal.jar forge.jar
+echo "Server jar should be callable by SpongeBootstrap at forge-1.12.2-14.23.5.2847-universal.jar"
+#echo Renaming forge to forge.jar...
+#rm forge.jar || true
+#mv forge-1.12.2-14.23.5.2847-universal.jar forge.jar
 #echo
 #echo "=========================================================="
 #echo "!!      The server has been installed successfully.     !!"
