@@ -15,10 +15,10 @@ It is very important that you include -e RCON=(your password) on initial install
 - worldedit-forge-mc1.12.2-6.1.10-cc975.01-SNAPSHOT-dist
 
 ### Included Plugins:
+- Aroma1997Core-1.12.2-2.0.0.2
 - AromaBackup-1.12.2-2.1.1.4
-- Dynmap-GriefPrevention-[GP.4.3.x]-1.1-SNAPSHOT
+- DiscordIntegration-mc1.12.2-3.0.5
+- Dynmap-3.0-beta-4-forge-1.12.2
 - FastAsyncWorldEdit-forge111-16.12.27-2d295ef-455-9.24.5
+- forgeessentials-1.12.2-12.3.82-server
 - gitformat-3.0.0.0.b132
-- griefprevention-1.12.2-4.3.0.692
-- MagiBridge-API7-2.9.3
-- Nucleus-1.14.3-S7.1-MC1.12.2-plugin
