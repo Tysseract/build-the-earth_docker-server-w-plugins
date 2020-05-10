@@ -28,7 +28,7 @@ COPY instance/. /minecraft/
 
 ADD https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar /minecraft/installer.jar
 
-COPY SpongeBootstrap-0.7.1.jar /minecraft/SpongeBootstrap-0.7.1.jar
+#COPY SpongeBootstrap-0.7.1.jar /minecraft/SpongeBootstrap-0.7.1.jar
 
 COPY plugins/. /minecraft/mods/
 

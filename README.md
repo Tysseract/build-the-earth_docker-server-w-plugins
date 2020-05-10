@@ -22,4 +22,3 @@ It is very important that you include -e RCON=(your password) on initial install
 - griefprevention-1.12.2-4.3.0.692
 - MagiBridge-API7-2.9.3
 - Nucleus-1.14.3-S7.1-MC1.12.2-plugin
-- spongeforge-1.12.2-2838-7.2.1
