@@ -18,7 +18,5 @@ It is very important that you include -e RCON=(your password) on initial install
 - Aroma1997Core-1.12.2-2.0.0.2
 - AromaBackup-1.12.2-2.1.1.4
 - DiscordIntegration-mc1.12.2-3.0.5
-- Dynmap-3.0-beta-4-forge-1.12.2
-- FastAsyncWorldEdit-forge111-16.12.27-2d295ef-455-9.24.5
-- forgeessentials-1.12.2-12.3.82-server
 - gitformat-3.0.0.0.b132
+- landmanager-1.12.2-1.5.0
