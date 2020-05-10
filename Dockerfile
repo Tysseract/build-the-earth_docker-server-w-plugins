@@ -4,7 +4,7 @@ LABEL maintainer="Tys vanZeyl <tys@tysseract.net>" \
   org.label-schema.name="BTE SB" \
   org.label-schema.version="1.12.2" \
   org.label-schema.vendor="Tys vanZeyl" \
-  org.label-schema.schema-version="1.0"
+  org.label-schema.schema-version="1.1"
 
 EXPOSE 25565 25575 8123
 
