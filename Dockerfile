@@ -15,6 +15,7 @@ CMD ["/bin/s6-svscan", "/etc/s6"]
 
 RUN apk update && \
   apk upgrade && \
+  apk add git less openssh && \
   rm -rf /var/cache/apk/*
 
 ENV MINECRAFT_VERSION 1.12.2
