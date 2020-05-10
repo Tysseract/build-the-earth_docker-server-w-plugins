@@ -34,3 +34,9 @@ echo "Server jar should be callable at forge-1.12.2-14.23.5.2847-universal.jar"
 #echo
 echo "setting rcon password to" ${RCON} "..."
 echo ${RCON} >> /minecraft/server.properties
+
+
+#have to setup git for backups
+if [![ -z "$GITUSR" || -z "$GITPASS"]]
+  echo "setting up git for backups..."
+  (crontab -l 2>/dev/null; echo "15 * * * * /minecraft/backup.sh") | crontab -
