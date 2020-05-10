@@ -39,7 +39,7 @@ ENV RCON ChangeMe
 
 RUN cd /minecraft && \
   echo "eula="${EULA} > /minecraft/eula.txt && \
-  chmod +x /minecraft/run.sh
+  chmod +x /minecraft/run.sh && \
   chmod +x /minecraft/install.sh
 
 ENTRYPOINT ["/minecraft/run.sh"]
