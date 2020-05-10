@@ -30,3 +30,5 @@ mv forge-1.12.2-14.23.5.2847-universal.jar forge.jar
 #echo
 #read -n 1 -p "Press any key to continue..."
 #echo
+echo "setting rcon password to" ${RCON} "..."
+echo ${RCON} >> /minecraft/server.properties

@@ -35,6 +35,7 @@ ENV EULA false
 ENV Xss 6M
 ENV Xmx 6G
 ENV Xms 4G
+ENV RCON ChangeMe
 
 #RUN cd /minecraft && \
 #  echo ${EULA} > eula.txt
