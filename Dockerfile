@@ -24,18 +24,19 @@ ENV FORGE_VERSION 14.23.5.2847
 ENV FORGE_JAR forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-universal.jar
 ENV FORGE_URL http://files.minecraftforge.net/maven/net/minecraftforge/forge/${MINECRAFT_VERSION}-${FORGE_VERSION}/forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar
 
-RUN curl --create-dirs -sLo /minecraft/forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar ${FORGE_URL}
+ADD https://files.minecraftforge.net/maven/net/minecraftforge/forge/1.12.2-14.23.5.2847/forge-1.12.2-14.23.5.2847-installer.jar installer.jar
 
-COPY BTE_Official_Server_MAC/* /minecraft
+COPY BTE_Official_Server_MAC/* /minecraft/
 
-RUN curl --create-dirs -sLo /minecraft/forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar ${FORGE_URL} && \
-  cd /minecraft && \
-  java -jar forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar --installServer && \
-  rm -f forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar.log && \
+#RUN curl --create-dirs -sLo /minecraft/forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-installer.jar ${FORGE_URL}
+  
+RUN cd /minecraft/ && \
+  java -jar installer.jar --installServer && \
+  rm -f installer.jar && \
   rm forge.jar || true && \
   mv forge-${MINECRAFT_VERSION}-${FORGE_VERSION}-universal.jar forge.jar
   
-COPY plugins/* /minecraft/mods
+COPY plugins/* /minecraft/mods/
 
 #options
 ENV EULA true
