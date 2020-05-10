@@ -1,4 +1,4 @@
-##A docker container on JDK 8 on Alpine Linux that supports adding plugins (eg: sponge, dynmap in plugins folder)</H2>
+##A docker container on JDK 8 on Alpine Linux, with plugins!
 
 ###**IMPORTANT!**
 ```rcon is enabled on port 25575 as this is the only way to interact with the terminal (without plugins). 
