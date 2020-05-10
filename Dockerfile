@@ -40,6 +40,9 @@ ENV Xmx 6G
 ENV Xms 4G
 ENV RCON ChangeMe
 
+#git backup
+#ENV GITURL https://{GITUSR}:{GITPASS}github.com/BTE-SB-Server/Backup.git
+
 RUN cd /minecraft && \
   echo "eula="${EULA} > /minecraft/eula.txt && \
   chmod +x /minecraft/run.sh && \

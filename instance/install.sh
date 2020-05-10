@@ -37,6 +37,8 @@ echo ${RCON} >> /minecraft/server.properties
 
 
 #have to setup git for backups
-if [![ -z "$GITUSR" || -z "$GITPASS"]]
+if [[ ! -z "$GITURL"]]
+then
   echo "setting up git for backups..."
-  (crontab -l 2>/dev/null; echo "15 * * * * /minecraft/backup.sh") | crontab -
+  (crontab -l 2>/dev/null; echo "*/10 * * * * /minecraft/backup.sh") | crontab -
+fi
