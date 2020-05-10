@@ -1,0 +1,1 @@
+place dynmap and/or Sponge + any plugins here
