@@ -49,5 +49,7 @@ RUN cd /minecraft && \
   chmod +x /minecraft/backup.sh && \
   chmod +x /minecraft/install.sh
 RUN ["chmod", "+x", "/minecraft/run.sh"]
+RUN ["chmod", "+x", "/minecraft/backup.sh"]
+RUN ["chmod", "+x", "/minecraft/install.sh"]
 
 ENTRYPOINT ["/minecraft/run.sh"]
