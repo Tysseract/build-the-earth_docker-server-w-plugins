@@ -1,0 +1,1 @@
+These config files are for examples only, and do not get added to the docker. For that, use the config directory in instances.
