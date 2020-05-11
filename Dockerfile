@@ -4,7 +4,7 @@ LABEL maintainer="Tys vanZeyl <tys@tysseract.net>" \
   org.label-schema.name="build-the-earth_docker-server-w-plugins" \
   org.label-schema.version="1.12.2" \
   org.label-schema.vendor="Tys vanZeyl" \
-  org.label-schema.schema-version="1.2"
+  org.label-schema.schema-version="1.3"
 
 EXPOSE 25565 25575 8123
 

@@ -1,6 +1,7 @@
 ## A docker container on JDK 8 on Alpine Linux, with plugins!
 
 ### **IMPORTANT!**
+
 #### RCON
 ```rcon is enabled on port 25575 as this is the only way to interact with the terminal (without plugins). 
 The password is set during install with the enviroment variable RCON (default RCON=ChangeMe). 
