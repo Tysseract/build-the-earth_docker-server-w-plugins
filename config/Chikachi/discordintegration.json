@@ -1,6 +1,6 @@
 {
   "discord": {
-    "token": "",
+    "token": "abcd.efgh.ijklmno",
     "ignoresBots": true,
     "allowLinking": true,
     "ignoresUsers": [],
@@ -16,7 +16,84 @@
         },
         "commands": []
       },
-      "channels": {}
+      "channels": {
+		"1234567890users": {
+		},
+		"1234567890admins": {
+		  "canExecuteCommands": true,
+		  "stripMinecraftCodes": false,
+		  "commands": [
+			{ // Example: Stop command
+            "name": "stop", // Discord command : commandPrefix (!) + name (stop) = !stop
+            "command": "stop", // Minecraft command : Slash (/) + command (stop) = /stop
+            "enabled": true, // Enable command
+            "aliases": [ // Define aliases
+              "close" // !close
+				],
+            "permissions": [ // Define permissions
+              "role:ADMINISTRATOR", // role:DiscordRoleName
+				]
+			}, {
+            "name": "tps",
+            "command": "discord tps",
+            "enabled": true
+			}, {
+            "name": "online",
+            "command": "discord online",
+            "enabled": true
+			}, {
+            "name": "list",
+            "command": "list",
+            "enabled": true
+			}, {
+            "name": "kick",
+            "command": "kick {ARG_1}", // !kick User Because I can => /kick User
+            "enabled": true
+			}, {
+            "name": "ban",
+            "command": "ban {ARGS}", // !ban User Because I can => /ban User Because I can
+            "enabled": true,
+			"permissions": [ // Define permissions
+              "role:ADMINISTRATOR", // role:ADMINISTRATOR
+				]
+			}, {
+            "name": "whitelist",
+            "command": "whitelist {ARGS}",
+            "enabled": true
+			}, {
+            "name": "op",
+            "command": "op {ARGS}",
+            "enabled": true,
+			"permissions": [ // Define permissions
+              "role:ADMINISTRATOR", // role:ADMINISTRATOR
+				]
+			}, {
+            "name": "deop",
+            "command": "deop {ARGS}",
+            "enabled": true,
+			"permissions": [ // Define permissions
+              "role:ADMINISTRATOR", // role:ADMINISTRATOR
+				]
+			}, {
+            "name": "give",
+            "command": "give {ARGS}",
+            "enabled": true
+			}, {
+            "name": "effect",
+            "command": "effect {ARGS}",
+            "enabled": true
+			}, {
+            "name": "time",
+            "command": "time {ARGS}",
+            "enabled": true
+			}, {
+            "name": "weather",
+            "command": "weather {ARGS}",
+            "enabled": true
+			}
+		  ]
+		}
+	  }
     }
   },
   "minecraft": {
@@ -34,7 +111,7 @@
         "chatPrefix": "",
         "canMentionUsers": true,
         "canMentionRoles": true,
-        "discordChannel": [],
+        "discordChannel": [12345678900users, 1234567890admins],
         "relayAchievements": true,
         "relayChat": true,
         "relayCommands": true,
