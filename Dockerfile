@@ -16,6 +16,8 @@ CMD ["/bin/s6-svscan", "/etc/s6"]
 RUN apk update && \
   apk upgrade && \
   apk add git less openssh && \
+  apk add openrc && \
+  apk add busybox-initscripts && \
   rm -rf /var/cache/apk/*
 
 ENV MINECRAFT_VERSION 1.12.2
@@ -41,15 +43,16 @@ ENV Xms 4G
 ENV RCON ChangeMe
 
 #git backup
+COPY backup.sh etc/periodic/15min/backup.sh
 #ENV GITURL https://{GITUSR}:{GITPASS}@github.com/BTE-SB-Server/Backup.git
 
 RUN cd /minecraft && \
   echo "eula="${EULA} > /minecraft/eula.txt && \
   chmod +x /minecraft/run.sh && \
-  chmod +x /minecraft/backup.sh && \
-  chmod +x /minecraft/install.sh
+  chmod +x /minecraft/install.sh && \
+  chmod +x etc/periodic/15min/backup.sh
 RUN ["chmod", "+x", "/minecraft/run.sh"]
-RUN ["chmod", "+x", "/minecraft/backup.sh"]
 RUN ["chmod", "+x", "/minecraft/install.sh"]
+RUN ["chmod", "+x", "etc/periodic/15min/backup.sh"]
 
 ENTRYPOINT ["/minecraft/run.sh"]
