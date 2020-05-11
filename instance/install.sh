@@ -37,14 +37,18 @@ echo ${RCON} >> /minecraft/server.properties
 
 
 #have to setup git for backups
-if [[ ! -z "$GITURL" ]]; then
-    echo "setting up git for backups..."
-    #(crontab -l 2>/dev/null; echo "*/10 * * * * ./minecraft/backup.sh")| crontab -
-	rc-service crond start && rc-update add crond
-	crontab -l
-	run-parts --report --test /etc/periodic/15min
-	cd /etc/periodic/15min
-	ls
-	chmod a+x /etc/periodic/15min/backup
-	run-parts --report --test /etc/periodic/15min
-fi
+#if [[ ! -z "$GITURL" ]]; then
+#    echo "setting up git for backups..."
+#    #(crontab -l 2>/dev/null; echo "*/10 * * * * ./minecraft/backup.sh")| crontab -
+#	rc-service --list
+#	#rc-service crond start && rc-update add crond
+#	crontab -l
+#	cd /etc/periodic/15min
+#	ls -l /etc/periodic/15min/backup
+#	chmod 700 /etc/periodic/15min/backup
+#	chown root /etc/periodic/15min/backup
+#	ls -l /etc/periodic/15min/backup
+#	run-parts --test /etc/periodic/15min
+#	/sbin/service cron start
+#	ps -ef | grep crond | grep -v grep
+#fi
