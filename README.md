@@ -11,8 +11,9 @@ It is very important that you include -e RCON=(your password) on initial install
 The docker is setup to backup to the git upstream remote (e.g. github) repo at the url passed in with the enviroment variable GITURL.
 It is highly recommended that you use this backup because accidentally "restart"ing instead of "start"ing a stopped container will reset the whole thing.
 - If you *don't* want to backup, run the docker *without* `-e GITURL=`
-- If you *do* want to backup, run the docker with the option `-e GITURL=*(the repository url)*`
-**for password protected repos** which should be most, you can include the login in the url (i.e.: `-e GITURL=https://GITHUBUSERNAME:GITHUBPASSWORD@github.com/GITHUBUSERNAME/repo.git`). This is, admittedly, an **UNSECURE implementation** as the login information is stored in the enviroment variables of the docker container and therefore anyone with control of the container has control of the github account. It is for this reason that **you should ___not___ use your personal github** but instead create a new account for hosting the backup. If anyone else has a better way to implement this, feel free to submit a pull request :)
+- If you *do* want to backup, run the docker with the option `-e GITURL=(the repository url)`
+
+**For password protected repos** which should be most, you can include the login in the url (i.e.: `-e GITURL=https://GITHUBUSERNAME:GITHUBPASSWORD@github.com/GITHUBUSERNAME/repo.git`). This is, admittedly, an **UNSECURE implementation** as the login information is stored in the enviroment variables of the docker container and therefore anyone with control of the container has control of the github account. It is for this reason that **you should ___not___ use your personal github** but instead create a new account for hosting the backup. If anyone else has a better way to implement this, feel free to submit a pull request :)
 The plugin runs a backup commit every 30 minutes (as long as there has been changes to the world) and always one after the server loads, and the shell runs a git push every 15 minutes and always one 5 minutes after the server starts loading so there should always be a pushed backup 5 minutes after starting the server and a running max of 45 minutes between a change on the server and a push to the origin remote.
 
 ### reccomended docker run:
