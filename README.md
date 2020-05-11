@@ -18,7 +18,7 @@ It is highly recommended that you use this backup because accidentally "restart"
 The plugin runs a backup commit every 30 minutes (as long as there has been changes to the world) and always one after the server loads, and the shell runs a git push every 15 minutes and always one 5 minutes after the server starts loading so there should always be a pushed backup 5 minutes after starting the server and a running max of 45 minutes between a change on the server and a push to the origin remote.
 
 ### reccomended docker run:
-`docker run -p 25565:25565 -p 25575:25575 -e EULA=true --restart unless-stopped --name BTEP_Server -e RCON=YOURPASSWORD -e GITURL=https://GITHUBUSERNAME:GITHUBPASSWORD@github.com/GITHUBUSERNAME/repo.git btep:40`
+`docker run -p 25565:25565 -p 25575:25575 -e EULA=true --restart unless-stopped --name BTEP_Server -e RCON=YOURPASSWORD -e GITURL=https://GITUSERNAME:GITPASSWORD@github.com/GITUSERNAME/REPO.git tysseract/build-the-earth_docker-server-w-plugins:1.3`
 
 ### Build The Earth required mods:
 - CubicChunks-1.12.2-0.0.1055.0-SNAPSHOT-all
