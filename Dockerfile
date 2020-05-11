@@ -43,16 +43,16 @@ ENV Xms 4G
 ENV RCON ChangeMe
 
 #git backup
-COPY backup.sh etc/periodic/15min/backup.sh
+COPY backup.sh /etc/periodic/15min/backup
 #ENV GITURL https://{GITUSR}:{GITPASS}@github.com/BTE-SB-Server/Backup.git
 
 RUN cd /minecraft && \
   echo "eula="${EULA} > /minecraft/eula.txt && \
   chmod +x /minecraft/run.sh && \
   chmod +x /minecraft/install.sh && \
-  chmod +x etc/periodic/15min/backup.sh
+  chmod +x /etc/periodic/15min/backup
 RUN ["chmod", "+x", "/minecraft/run.sh"]
 RUN ["chmod", "+x", "/minecraft/install.sh"]
-RUN ["chmod", "+x", "etc/periodic/15min/backup.sh"]
+RUN ["chmod", "+x", "/etc/periodic/15min/backup"]
 
 ENTRYPOINT ["/minecraft/run.sh"]
